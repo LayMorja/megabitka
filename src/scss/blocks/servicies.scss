@@ -60,7 +60,7 @@
       }
    }
 
-   &__filters ul {
+   &__filter {
       flex: 1 1 auto;
       @extend %fl-r-ct;
       justify-content: space-between;
@@ -70,7 +70,7 @@
       }
    }
 
-   &__filters ul li {
+   &__filter button {
       flex-grow: 1;
       @media(max-width: $tablet) {
          flex: 1 1 49%;
@@ -84,14 +84,14 @@
       }
    }
 
-   &__filters ul li:not(:last-child) {
+   &__filter button:not(:last-child) {
       margin-right: rem(20);
       @media(max-width: $tablet) {
          margin-right: 0;
       }
    }
 
-   &__filters ul li:not(:nth-child(2n)) {
+   &__filter button:not(:nth-child(2n)) {
       @media(max-width: $tablet) {
          margin-right: 2%;
       }
@@ -100,7 +100,7 @@
       }
    }
 
-   &__filters ul li button {
+   &__filter button {
       width: 100%;
       @extend %fl-r-sb;
       padding: rem(17) rem(24);
@@ -139,6 +139,10 @@
       @media(max-width: $mobileSmall) {
          margin-top: rem(16);
       }
+   }
+
+   &__item {
+      width: 100%;
    }
 
    &__item:not(:last-child) {

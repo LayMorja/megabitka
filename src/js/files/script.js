@@ -147,6 +147,25 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 })
 
+let prevFilter = "*";
+
+const $grid = $('.servicies__cards').isotope({
+   itemSelector: '.servicies__item',
+});
+$('.servicies__filter').on('click','button', function() {
+   const filterValue = $(this).attr('data-filter');
+   console.log(prevFilter, filterValue);
+   prevFilter = $(this).attr('data-filter');
+   $grid.isotope({ filter: filterValue });
+
+   // if ($(this).hasClass("_tapped")) {
+   //    $(this).removeClass("_tapped")
+   // } else {
+   //    setTimeout(() => $(this).addClass("_tapped"), 500);
+   //    $grid.isotope({ filter: "*" });
+   // }
+});
+
 const buttonMore = document.querySelector(".servicies__more");
 const countOfAll = document.querySelectorAll(".servicies__card").length;
 const cards = Array.from(document.querySelector(".servicies__cards").children);
@@ -157,10 +176,16 @@ function hideBlock() {
    curItems += 3;
    const visibleItems = cards.slice(0, curItems);
    visibleItems.forEach(item => {
-      item.hasAttribute("hidden") ? _slideToggle(item) : null;
+      if (item.hasAttribute("hidden")) {
+         item.removeAttribute("hidden");
+         $grid.isotope( 'addItems', item )
+      }
    });
+   $grid.isotope('reloadItems');
+   console.log(prevFilter);
+   $grid.isotope({ filter: prevFilter });
    if (curItems >= countOfAll) {
-      buttonMore.classList.add("_hide");
+      $(buttonMore).hide();
       buttonMore.removeEventListener("click", hideBlock)
    }
 }

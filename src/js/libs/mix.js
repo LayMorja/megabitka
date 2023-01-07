@@ -1,29 +1,23 @@
 import mixitup from "mixitup";
-import { _slideDown, _slideUp, _slideToggle } from "../files/functions.js";
 
-const containerEl = document.querySelector(".servicies__cards");
+const containerEl = document.querySelector(".");
 const mixer = mixitup(containerEl, {
    animation: {
-      applyPerspective: false
+      applyPerspective: false,
+   },
+   selectors: {
+      control: '.servicies__button'
+   },
+   callbacks: {
+      onMixStart: function(state, futureState) {
+         console.log(state, futureState);
+         // const button = originalEvent.target;
+         // if (button.classList.contains("_tapped")) {
+         //    console.log(this, mixer);
+         //    button.classList.remove("_tapped");
+         // } else {
+         //    setTimeout(() => button.classList.add("_tapped"), 400);
+         // }  
+      }
    }
 });
-
-const buttonMore = document.querySelector(".servicies__more");
-const countOfAll = document.querySelectorAll(".servicies__card").length;
-const cards = Array.from(document.querySelector(".servicies__cards").children);
-let curItems = 3;
-buttonMore.addEventListener("click", hideBlock);
-
-function hideBlock() {
-   curItems += 3;
-   const visibleItems = cards.slice(0, curItems);
-   visibleItems.forEach(item => {
-      item.hasAttribute("hidden") ? _slideToggle(item) : null;
-   });
-   if (curItems >= countOfAll) {
-      mixer.forceRefresh();
-      mixer.filter("all");
-      $(buttonMore).hide();
-      buttonMore.removeEventListener("click", hideBlock)
-   }
-}
