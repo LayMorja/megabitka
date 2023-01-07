@@ -3,7 +3,7 @@
 // Подключение списка активных модулей
 // import { flsModules } from "./modules.js";
 
-import { getDigFormat, getDigFromString, _slideDown, _slideUp, _slideToggle } from "./functions.js";
+import { getDigFormat, getDigFromString, _slideDown, _slideUp, _slideToggle, removeClasses } from "./functions.js";
 
 function setPrice(target, value, delay) {
    delay = delay ? delay : 200;
@@ -11,19 +11,6 @@ function setPrice(target, value, delay) {
    setTimeout(() => {target.text(value);}, delay)
    target.fadeIn(delay);
 }
-
-// function formPrice() {
-//    const form = document.querySelector(".form-servicies");
-//    const connectPrice = form.querySelector(".form-servicies__price [data-form-result]");
-//    let settingPrice = 0;
-//    form.querySelectorAll("select").forEach(sel => {
-//       if (!sel.value.includes("static")) {
-//          settingPrice += getDigFromString(sel.value);
-//       }
-//    });
-//    setPrice($(connectPrice), getDigFormat(settingPrice))
-// }
-// document.addEventListener("DOMContentLoaded", formPrice);
 
 function changePrice(el, tariff, device, type) {
    const tarifResult = $(el).find(".service__result-price").find("[data-tariff]");
@@ -147,16 +134,81 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 })
 
-let prevFilter = "*";
-
-const $grid = $('.servicies__cards').isotope({
-   itemSelector: '.servicies__item',
+const buttonMore = document.querySelector(".servicies__more");
+const items = document.querySelectorAll(".servicies__item")
+const returnItems = () => items.forEach(item => {
+   // item.classList.remove("_fully-hidden");
+   // setTimeout(() => item.classList.remove("_hidden"), 300)
+   // $(item).fadeIn(200);
 });
-$('.servicies__filter').on('click','button', function() {
-   const filterValue = $(this).attr('data-filter');
-   console.log(prevFilter, filterValue);
-   prevFilter = $(this).attr('data-filter');
-   $grid.isotope({ filter: filterValue });
+const countOfAll = items.length;
+const filterButtons = document.querySelectorAll(".servicies__button");
+const cards = Array.from(document.querySelector(".servicies__cards").children);
+
+let curItems = 3;
+buttonMore.addEventListener("click", hideBlock);
+
+let previousFilter;
+let prevButton;
+
+filterButtons.forEach(button => button.addEventListener("click", filterAction));
+function filterAction(event) {
+   const button = event.target;   
+   if (button == prevButton) {
+      removeClasses(filterButtons, "_active");
+      items.forEach(item => {
+         if (!item.hasAttribute("hidden") && item.style.display == "none") {
+            $(item).fadeIn(400);
+         }
+      });
+      return;
+   }
+   const value = button.dataset.filter;
+   removeClasses(filterButtons, "_active");
+   button.classList.add("_active");
+   prevButton = button;
+   previousFilter = value;
+   items.forEach(item => {
+      if (!item.classList.contains(value)) {
+         $(item).fadeOut(0);
+      } 
+      if ($(item).hasClass(value) && !item.hasAttribute("hidden")) {
+         $(item).fadeIn(400);
+      }
+   });
+}
+
+function hideBlock() {
+   curItems += 3;
+   const visibleItems = cards.slice(0, curItems);
+   visibleItems.forEach(item => {
+      console.log(previousFilter)
+      if (item.hasAttribute("hidden")) {
+         item.removeAttribute("hidden");
+         if (item.classList.contains(previousFilter)) {
+            $(item).fadeIn(400);
+         } else {
+            item.style.display = "none";
+         }
+      }
+   });
+   if (curItems >= countOfAll) {
+      $(buttonMore).fadeOut(500);
+      buttonMore.removeEventListener("click", hideBlock)
+   }
+}
+
+
+// let prevFilter = "*";
+
+// const $grid = $('.servicies__cards').isotope({
+//    itemSelector: '.servicies__item',
+// });
+// $('.servicies__filter').on('click','button', function() {
+//    const filterValue = $(this).attr('data-filter');
+//    console.log(prevFilter, filterValue);
+//    prevFilter = $(this).attr('data-filter');
+//    $grid.isotope({ filter: filterValue });
 
    // if ($(this).hasClass("_tapped")) {
    //    $(this).removeClass("_tapped")
@@ -164,28 +216,17 @@ $('.servicies__filter').on('click','button', function() {
    //    setTimeout(() => $(this).addClass("_tapped"), 500);
    //    $grid.isotope({ filter: "*" });
    // }
-});
+// });
 
-const buttonMore = document.querySelector(".servicies__more");
-const countOfAll = document.querySelectorAll(".servicies__card").length;
-const cards = Array.from(document.querySelector(".servicies__cards").children);
-let curItems = 3;
-buttonMore.addEventListener("click", hideBlock);
-
-function hideBlock() {
-   curItems += 3;
-   const visibleItems = cards.slice(0, curItems);
-   visibleItems.forEach(item => {
-      if (item.hasAttribute("hidden")) {
-         item.removeAttribute("hidden");
-         $grid.isotope( 'addItems', item )
-      }
-   });
-   $grid.isotope('reloadItems');
-   console.log(prevFilter);
-   $grid.isotope({ filter: prevFilter });
-   if (curItems >= countOfAll) {
-      $(buttonMore).hide();
-      buttonMore.removeEventListener("click", hideBlock)
-   }
-}
+// function formPrice() {
+//    const form = document.querySelector(".form-servicies");
+//    const connectPrice = form.querySelector(".form-servicies__price [data-form-result]");
+//    let settingPrice = 0;
+//    form.querySelectorAll("select").forEach(sel => {
+//       if (!sel.value.includes("static")) {
+//          settingPrice += getDigFromString(sel.value);
+//       }
+//    });
+//    setPrice($(connectPrice), getDigFormat(settingPrice))
+// }
+// document.addEventListener("DOMContentLoaded", formPrice);

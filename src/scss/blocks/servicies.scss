@@ -125,7 +125,7 @@
             }
          }
       }
-      &.mixitup-control-active {
+      &._active {
          border-color: var(--clr-accent);
          color: var(--clr-accent);
          &::after {
