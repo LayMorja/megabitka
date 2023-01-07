@@ -1,0 +1,24 @@
+.phone {
+   @extend %fl-c-st;
+   a {
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: 100%;
+      transition: opacity 0.32s ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            opacity: 0.8;
+         }
+      }
+      &:focus {
+         outline: none;
+         opacity: 0.8;
+      }
+   }
+   span {
+      margin-top: rem(1);
+      font-size: rem(11);
+      line-height: 140%;
+      letter-spacing: 0.03em;
+   }
+}

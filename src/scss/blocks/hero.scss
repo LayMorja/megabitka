@@ -1,0 +1,203 @@
+.hero {
+   color: var(--clr-white);
+   background-color: var(--clr-green);
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-size: cover;
+   @media(max-width: $mobileSmall) {
+      background-image: url("@img/hero/background--mobile.svg") !important;
+   }
+   &__container {
+      width: 100%;
+      min-height: rem(480);
+      padding-top: rem(40);
+      padding-bottom: rem(80);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   &__body {
+      h1, p {
+         line-height: 100%;
+         text-align: center;
+      }
+      h1 {
+         font-weight: 700;
+         font-size: rem(40);
+         @media(max-width: $tablet) {
+            font-size: rem(32);
+         }
+         @media(max-width: $mobile) {
+            font-size: rem(28);
+         }
+         @media(max-width: $mobileNormal) {
+            font-size: rem(24);
+         }
+         @media(max-width: $mobileMini) {
+            font-size: rem(22);
+         }
+      }
+      p {
+         font-weight: 600;
+         font-size: rem(16);
+         margin-top: rem(20);
+         @media(max-width: $mobileMedium) {
+            font-size: rem(14);
+            margin-top: rem(18);
+         }
+      }
+   }
+
+   &__form {
+      max-width: rem(1080);
+      margin: 0 auto;
+      @extend %fl-r-ct;
+      margin-top: rem(30);
+      @media(max-width: $mobileNormal) {
+         flex-wrap: wrap;
+      }
+      @media(max-width: $mobileSmall) {
+         margin-top: rem(26);
+      }
+   }
+
+   &__form-item {
+      flex: 1 1 22%;
+      width: 22%;
+      &:first-child {
+         flex: 1 1 56%;
+         width: 56%; 
+      }
+      &:not(:last-child) {
+         margin-right: rem(14);
+      }
+      input {
+         width: 100%;
+         height: rem(48);
+         font-weight: 500;
+         line-height: 100%;
+         border-radius: 4px;
+         &::placeholder {
+            opacity: 1;
+            color: rgba(37, 37, 37, 0.6);
+         }
+      }
+      input:not([type="submit"]) {
+         padding: rem(17) rem(32);
+         transition: box-shadow 0.3s ease-out;
+         @media(any-hover: hover) {
+            &:hover {
+               box-shadow: 5px 5px 15px rgba(13, 64, 66, 0.3);
+            }
+         }
+         &:focus {
+            outline: none;
+            box-shadow: 2px 2px 5px 2px rgba(13, 64, 66, 0.3),
+                        5px 5px 35px rgba(13, 64, 66, 0.2);
+         }
+      }
+      @media(max-width: $mobile) {
+         flex: 1 1 30%;
+         width: 30%;
+         &:first-child {
+            flex: 1 1 40%;
+            width: 40%; 
+         }
+         input:not([type="submit"]) {
+            padding: rem(17) rem(16);
+         }
+      }
+      @media(max-width: $mobileNormal) {
+         &:last-child {
+            flex: 1 1 auto;
+            width: 100%;
+            margin-top: rem(14);
+         }
+         &:not(:last-child) {
+            margin-right: 0;
+         }
+         &:first-child {
+            margin-right: 2%;
+            flex: 1 1 68%;
+            width: 68%;
+         }
+         &:nth-child(2) {
+            flex: 1 1 30%;
+            width: 30%;
+         }
+      }
+   }
+
+   &__options {
+      margin: 0 auto;
+      margin-top: rem(45);
+      @extend %fl-r-ct;
+      justify-content: space-between;
+      max-width: rem(974);
+      @media(max-width: $tablet) {
+         flex-wrap: wrap;
+      }
+      li {
+         @extend %fl-r-ct;
+         &:not(:last-child) {
+            margin-right: rem(15);
+         }
+         @media(max-width: $tablet) {
+            width: 49%;
+            margin-bottom: 2%;
+            &:not(:last-child) {
+               margin-right: 0;
+            }
+            &:not(:nth-child(2n)) {
+               margin-right: 2%;
+            }
+         }
+         @media(max-width: $mobileSmall) {
+            width: 100%;
+            &:not(:last-child) {
+               margin-right: 0;
+               margin-bottom: rem(8);
+            }
+            &:first-child {
+               margin-bottom: rem(22);
+               justify-content: center;
+            }
+            &:not(:first-child) {
+               margin-left: 20%;
+            }
+            &:not(:nth-child(2n)) {
+               margin-right: 0;
+            }
+         }
+         @media(max-width: $mobileMini) {
+            &:not(:first-child) {
+               margin-left: 10%;
+            }
+         }
+      }
+      li a {
+         text-decoration: underline;
+         &:hover,
+         &:focus {
+            outline: none;
+            text-decoration: none;
+         }
+      }
+      li a,
+      li span {
+         font-weight: 600;
+         font-size: rem(13);
+         line-height: 1.35;
+      }
+      li svg {
+         display: block;
+         width: rem(18);
+         height: rem(18);
+         margin-right: rem(12);
+      }
+      @media(max-width: $mobileSmall) {
+         margin-top: rem(24);
+      }
+   }
+}

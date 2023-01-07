@@ -1,0 +1,50 @@
+<div id="callback" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">
+            +
+         </button>
+			<form action="#" class="popup__form form-callback">
+            <h2>
+               Если остались вопросы, оставьте заявку, и мы свяжемся с вами в течении 15 минут
+            </h2>
+            <div class="form-callback__body">
+               <div class="form-callback__item">
+                  <label for="callback-name">Как вас зовут?</label>
+                  <input type="text" name="ФИО" id="callback-name" autocomplete="off" required placeholder="Ваше ФИО">
+               </div>
+               <div class="form-callback__item">
+                  <label for="callback-phone">Контактный телефон</label>
+                  <input type="tel" name="ФИО" id="callback-phone" autocomplete="off" required placeholder="+7 (___) ___-__-__">
+               </div>
+               <div class="form-callback__item">
+                  <input type="submit" value="Подобрать тариф" class="cta">
+               </div>
+            </div>
+            <span>
+               Отправляя заявку, вы соглашаетесь с <a href="#">политикой обратки персональных данных</a>
+            </span>
+         </form>
+		</div>
+	</div>
+</div>
+<div id="thanks" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__content--thanks">
+			<button data-close type="button" class="popup__close popup__close--green">
+            +
+         </button>
+         <div class="popup__text">
+            <div>
+               <h2 class="popup__title">
+                  Спасибо за заявку!
+               </h2>
+               <p class="popup__description">
+                  наши специалисты свяжутся с вами в ближайшее время 
+               </p>
+            </div>
+            <img class="popup__image" src="@temp/choose/04.svg" alt="специалист спешит вам на помощь!">
+         </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <title>«Мегабитка» | Поиск интернет провайдера по адресу</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">      
+      @@include("./html/_meta.html",{
+         "description":"Бесплатный сервис по подбору и подключению по вашему домашнему адресу",
+         "keywords":"интернет, провайдер, локатор по провайдерам, поиск провайдера"
+      })
+      @@include("./html/_styles-vendors.html",{})
+      <link rel="shortcut icon" href="@resources/favicon.ico" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         @@include("./html/_header.html",{})         
+         <main class="page">
+            <section class="page__hero hero" style="background-image: url('@img/hero/background.svg');">
+               <div class="hero__container container">
+                  <div class="hero__body">
+                     <h1>Поиск интернет провайдера по адресу</h1>
+                     <p>Бесплатный сервис по подбору и подключению по вашему домашнему адресу</p>
+                     <form action="#" class="hero__form">
+                        <div class="hero__form-item">
+                           <input type="text" autocomplete="off" required name="Название улицы" placeholder="Введите улицу">
+                        </div>
+                        <div class="hero__form-item">
+                           <input type="text" autocomplete="off" required name="Номер дома" placeholder="Дом">
+                        </div>
+                        <div class="hero__form-item">
+                           <input type="submit" value="Найти тарифы" class="cta" data-popup="#thanks">
+                        </div>
+                     </form>
+                     <ul class="hero__options">
+                        <li>
+                           <a href="#">Ваш адрес не находится?</a>
+                           <li>
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#cloud">
+                              </svg>
+                              <span>140 актуальных тарифов</span>
+                           </li>
+                           <li>
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#home">
+                              </svg>
+                              <span>8 060 адресов в базе</span>
+                           </li>
+                           <li>
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#group">
+                              </svg>
+                              <span>12 570 подключенных клиентов</span>
+                           </li>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </section>
+            <section class="page__servicies servicies" id="main-info">
+               <div class="servicies__container container">
+                  <nav class="servicies__filters">
+                     <span>Фильтры услуг</span>
+                     <ul>
+                        <li>
+                           <button class="servicies__button" type="button" aria-label="Фильтр услуг - Интернет" data-filter=".net">Интернет</button>
+                        </li>
+                        <li>
+                           <button class="servicies__button" type="button" aria-label="Фильтр услуг - Телевидение" data-filter=".tv">Телевидение</button>
+                        </li>
+                        <li>
+                           <button class="servicies__button" type="button" aria-label="Фильтр услуг - Интернет + ТВ" data-filter=".tv_net">Интернет + ТВ</button>
+                        </li>
+                        <li>
+                           <button class="servicies__button" type="button" aria-label="Фильтр услуг - Мобильная связь" data-filter=".mobile">Мобильная связь</button>
+                        </li>
+                     </ul>
+                  </nav>
+                  <h2>Ростелеком</h2>
+                  <ul class="servicies__cards">
+                     <li class="servicies__item mix tv_net rostelekom">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Технологии доступа</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>200</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item  _disabled" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li class="servicies__item mix tv rostelekom">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Игровой</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>800</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _disabled" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li class="servicies__item mix net rostelekom">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Облачный</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>350</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li hidden class="servicies__item mix net mobile">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Облачный</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>350</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li hidden class="servicies__item mix tv_net rostelekom">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Технологии доступа</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>200</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li hidden class="servicies__item mix tv rostelekom">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Игровой</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>800</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li hidden class="servicies__item mix net rostelekom">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Облачный</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>350</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li hidden class="servicies__item mix net mobile">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Облачный</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>350</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                     <li hidden class="servicies__item mix net mobile">
+                        <article class="servicies__card service">
+                           <div class="service__preview">
+                              <div class="service__image-box">
+                                 <img src="@temp/rostelekom.png" alt="«Ростелеком» - интернет-провайдер">
+                              </div>
+                              <div class="service__description">
+                                 <h3>Облачный</h3>
+                                 <ul>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#connection">
+                                       </svg>
+                                       <div>
+                                          <span>до <strong>350</strong> Мбит/с</span>
+                                          <span>по оптической технологии</span>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#chanels">
+                                       </svg>
+                                       <div>
+                                          <span><strong>105</strong> каналов</span>
+                                          <span>из них 14 HD</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__price">
+                                 <div>
+                                    <strong>890</strong>
+                                    <div>
+                                       <span>руб.</span><span>мес.</span>
+                                    </div>
+                                 </div>
+                                 <span>* Акция на первые 3 мес.</span>
+                              </div>
+                              <div class="service__activities">
+                                 <button class="cta" type="button" aria-label="Подключить услугу">Подключить</button>
+                                 <button class="service__more" type="button" aria-label="Открыть подробности">Подробнее о тарифе</button>
+                              </div>
+                           </div>
+                           <div class="service__content" hidden>
+                              <div class="service__result">
+                                 <ul class="service__devices">
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#router">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>Wi-FI роутер</h4>
+                                          <span>D-Link DIR-820</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__device device">
+                                       <svg>
+                                          <use xlink:href="@img/sprite.svg#tv_console">
+                                       </svg>
+                                       <div class="device__description">
+                                          <h4>ТВ приставка</h4>
+                                          <span>TVIP S-Box v.530</span>
+                                       </div>
+                                       <select name="Вариация оплаты" class="device__select">
+                                          <option value="190" selected>Рассрочка 24 мес</option>
+                                          <option value="380">Рассрочка 12 мес</option>
+                                          <option value="760">Рассрочка 6 мес</option>
+                                          <option value="4560 static">Покупка</option>
+                                       </select>
+                                       <div class="device__price">
+                                          <strong>190</strong><span>р/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <ul class="service__result-price">
+                                    <li class="service__result-item">
+                                       <span>Стоимость подключения:</span>
+                                       <div>
+                                          <strong>300</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Абонентская плата:</span>
+                                       <div>
+                                          <strong data-tariff>389</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                    <li class="service__result-item">
+                                       <span>Оборудование:</span>
+                                       <div>
+                                          <strong data-device>680</strong>
+                                          <span>руб/мес</span>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="service__text">
+                                 <h3>
+                                    Информация по тарифу
+                                 </h3>
+                                 <p>
+                                    Подключение домашнего интернета от компании Дом.ру производится по технологии Ethernet (витая пара).Оборудование клиента сервисный инженер настроит бесплатно при условии, что оно не прошито под определенную сеть.Так же возможно приобрести оборудование компании в рассрочку.
+                                 </p>
+                                 <h3>
+                                    Акции к тарифу
+                                 </h3>
+                                 <p>
+                                    Только для новых клиентов РА предоставляет скидку на абонентскую плату за услуги. Абонентская плата будет по 1 рублю за каждую услугу. Действует весь первый календарный месяц, с даты по дату (если акция подключена 5 марта, то скидка будет действовать по 5 апреля.
+                                 </p>
+                              </div>
+                              <div class="service__other other">
+                                 <h3>Дополнительные услуги к тарифу</h3>
+                                 <ul class="other__list">
+                                    <li class="other__item _active" data-tariff-price="50" data-device-price="290">
+                                       <div class="other__body">
+                                          <h4>Видеонаблюдение</h4>
+                                          <div class="other__price">
+                                             <strong>50</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>290</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__descr">Рассрочка 24 мес</div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="190" data-device-price="10">
+                                       <div class="other__body">
+                                          <h4>Домашний телефон</h4>
+                                          <div class="other__price">
+                                             <strong>190</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__device">
+                                             <p>Оборудование:</p>
+                                             <strong>10</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li class="other__item _active" data-tariff-price="149">
+                                       <div class="other__body">
+                                          <h4>Kaspersky Internet Security</h4>
+                                          <div class="other__price">
+                                             <strong>149</strong>
+                                             <span>р/мес</span>
+                                          </div>
+                                          <div class="other__actions">
+                                             <button type="button" class="other__more">
+                                                Описание
+                                             </button>
+                                             <button type="button" role="checkbox" aria-label="Убрать опцию" aria-checked="true" class="other__choose"></button>
+                                          </div>
+                                          <div class="other__description" hidden>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                             <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, fuga.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </article>
+                     </li>
+                  </ul>
+                  <button class="servicies__more cta">
+                     Показать еще
+                  </button>
+                  <form action="#" class="servicies__form form-servicies">
+                     <h3>Оставьте заявку, и мы свяжемся с Вами в течении 15 минут</h3>
+                     <div class="form-servicies__body">
+                        <div class="form-servicies__item">
+                           <label for="adress">Адрес подключения</label>
+                           <input id="adress" name="Адрес подключения" placeholder="Введите полный адрес подключения" type="text" autocomplete="off" required>
+                        </div>
+                        <div class="form-servicies__item">
+                           <label for="tariff-plane">Тарифный план</label>
+                           <input id="tariff-plane" name="Тарифный план" placeholder="Ростелеком, обалчный, 350 Мбит" type="text" autocomplete="off" required>
+                        </div>
+                        <div class="form-servicies__item">
+                           <label for="name">Как вас зовут?</label>
+                           <input id="name" name="Тарифный план" placeholder="Ваше ФИО" type="text" autocomplete="off" required>
+                        </div>
+                        <div class="form-servicies__item">
+                           <label for="cont-phone">Контактный телефон</label>
+                           <input id="cont-phone" name="Тарифный план" placeholder="+7 (___) ___-__-__" type="tel" autocomplete="off" required>
+                        </div>
+                        <div class="form-servicies__device device">
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#router">
+                           </svg>
+                           <div class="device__description">
+                              <h4>Wi-FI роутер</h4>
+                              <span>D-Link DIR-820</span>
+                           </div>
+                           <select name="Вариация оплаты" class="device__select">
+                              <option value="190" selected>Рассрочка 24 мес</option>
+                              <option value="380">Рассрочка 12 мес</option>
+                              <option value="760">Рассрочка 6 мес</option>
+                              <option value="4560 static">Покупка</option>
+                           </select>
+                           <div class="device__price">
+                              <strong>190</strong><span>р/мес</span>
+                           </div>
+                        </div>
+                        <div class="form-servicies__device device">
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#tv_console">
+                           </svg>
+                           <div class="device__description">
+                              <h4>ТВ приставка</h4>
+                              <span>TVIP S-Box v.530</span>
+                           </div>
+                           <select name="Вариация оплаты" class="device__select">
+                              <option value="190" selected>Рассрочка 24 мес</option>
+                              <option value="380">Рассрочка 12 мес</option>
+                              <option value="760">Рассрочка 6 мес</option>
+                              <option value="4560 static">Покупка</option>
+                           </select>
+                           <div class="device__price">
+                              <strong>190</strong><span>р/мес</span>
+                           </div>
+                        </div>
+                        <div class="form-servicies__price">
+                           <div>
+                              <p>Стоимость подключения</p>
+                              <strong>300</strong> <span>р/мес</span></div>
+                           <div>
+                              <p>Абонентская плата</p>
+                              <strong data-form-result>350</strong> <span>р/мес</span></div>
+                        </div>
+                        <div class="form-servicies__item">
+                           <input type="submit" value="Отправить заявку" class="cta">
+                           <span>Отправляя заявку, вы соглашаетесь с <a href="#">политикой обратки персональных данных</a></span>
+                        </div>
+                     </div>
+                  </form>
+                  <div class="servicies__benefits">
+                     <h3>Подключаем интернет за 1 день</h3>
+                     <ul class="servicies__benefits-list">
+                        <li class="servicies__benefits-item">
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#shedule">
+                           </svg>
+                           <h4>Оставьте заявку</h4>
+                           <p>Оставьте заявку на нашем сайте, закажите обратный звонок или позвонитепо бесплатному номеру телефона</p>
+                        </li>
+                        <li class="servicies__benefits-item">
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#callback">
+                           </svg>
+                           <h4>Получите консультацию</h4>
+                           <p>В течении 15 минут получите подробную консультацию специалиста по заявке на подключение</p>
+                        </li>
+                        <li class="servicies__benefits-item">
+                           <svg>
+                              <use xlink:href="@img/sprite.svg#calendar">
+                           </svg>
+                           <h4>Выберите время для подключения</h4>
+                           <p>Выберите удобное время для подключения и ожидайте мастера</p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </section>
+            <section class="page__sales sales" id="sales">
+               <div class="sales__container container">
+                  <h2>Самые выгодные тарифы в Санкт-Петербурге</h2>
+                  <p>Подбор тарифа и подключение домашнего интернета и телевидения по любому адресу в Санкт-Петербурге</p>
+                  <div class="sales__slider">
+                     <article class="sales__card sale">
+                        <div class="sale__image-box">
+                           <img src="@temp/beeline.png" alt="Логотип компании «Ростелеком»">
+                        </div>
+                        <span>Билайн</span>
+                        <h3>Технологии доступа</h3>
+                        <ul class="sale__list">
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#connection">
+                              </svg>
+                              <strong>200</strong>
+                              <span>Мбит/с</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#phone">
+                              </svg>
+                              <strong>50</strong>
+                              <span>ГБ</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#chanels">
+                              </svg>
+                              <strong>105</strong>
+                              <span>каналов</span>
+                           </li>
+                        </ul> 
+                        <div class="sale__price">
+                           <div class="sale__price-block">
+                              <strong class="sale__price-old">890</strong>
+                              <strong class="sale__price-new">1</strong>
+                              <div>
+                                 <span>руб.</span>
+                                 <span>мес.</span>
+                              </div>
+                           </div>
+                           <span>* Акция на первые 3 мес.</span>
+                        </div>
+                        <button class="cta sale__button" data-popup="#callback">Подключить тариф</button>
+                     </article>
+                     <article class="sales__card sale">
+                        <div class="sale__image-box">
+                           <img src="@temp/rostelekom.png" alt="Логотип компании «Ростелеком»">
+                        </div>
+                        <span>Ростелеком</span>
+                        <h3>Технологии доступа</h3>
+                        <ul class="sale__list">
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#connection">
+                              </svg>
+                              <strong>200</strong>
+                              <span>Мбит/с</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#phone">
+                              </svg>
+                              <strong>50</strong>
+                              <span>ГБ</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#chanels">
+                              </svg>
+                              <strong>105</strong>
+                              <span>каналов</span>
+                           </li>
+                        </ul> 
+                        <div class="sale__price">
+                           <div class="sale__price-block">
+                              <strong class="sale__price-old">890</strong>
+                              <strong class="sale__price-new">1</strong>
+                              <div>
+                                 <span>руб.</span>
+                                 <span>мес.</span>
+                              </div>
+                           </div>
+                           <span>* Акция на первые 3 мес.</span>
+                        </div>
+                        <button class="cta sale__button" data-popup="#callback">Подключить тариф</button>
+                     </article>
+                     <article class="sales__card sale">
+                        <div class="sale__image-box">
+                           <img src="@temp/rostelekom.png" alt="Логотип компании «Ростелеком»">
+                        </div>
+                        <span>Ростелеком</span>
+                        <h3>Технологии доступа</h3>
+                        <ul class="sale__list">
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#connection">
+                              </svg>
+                              <strong>200</strong>
+                              <span>Мбит/с</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#phone">
+                              </svg>
+                              <strong>50</strong>
+                              <span>ГБ</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#chanels">
+                              </svg>
+                              <strong>105</strong>
+                              <span>каналов</span>
+                           </li>
+                        </ul> 
+                        <div class="sale__price">
+                           <div class="sale__price-block">
+                              <strong class="sale__price-old">890</strong>
+                              <strong class="sale__price-new">1</strong>
+                              <div>
+                                 <span>руб.</span>
+                                 <span>мес.</span>
+                              </div>
+                           </div>
+                           <span>* Акция на первые 3 мес.</span>
+                        </div>
+                        <button class="cta sale__button" data-popup="#callback">Подключить тариф</button>
+                     </article>
+                     <article class="sales__card sale">
+                        <div class="sale__image-box">
+                           <img src="@temp/rostelekom.png" alt="Логотип компании «Ростелеком»">
+                        </div>
+                        <span>Ростелеком</span>
+                        <h3>Технологии доступа</h3>
+                        <ul class="sale__list">
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#connection">
+                              </svg>
+                              <strong>200</strong>
+                              <span>Мбит/с</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#phone">
+                              </svg>
+                              <strong>50</strong>
+                              <span>ГБ</span>
+                           </li>
+                           <li class="sale__item">
+                              <svg>
+                                 <use xlink:href="@img/sprite.svg#chanels">
+                              </svg>
+                              <strong>105</strong>
+                              <span>каналов</span>
+                           </li>
+                        </ul> 
+                        <div class="sale__price">
+                           <div class="sale__price-block">
+                              <strong class="sale__price-old">890</strong>
+                              <strong class="sale__price-new">1</strong>
+                              <div>
+                                 <span>руб.</span>
+                                 <span>мес.</span>
+                              </div>
+                           </div>
+                           <span>* Акция на первые 3 мес.</span>
+                        </div>
+                        <button class="cta sale__button" data-popup="#callback">Подключить тариф</button>
+                     </article>
+                  </div>
+               </div>
+            </section>
+            <section class="page__choose choose" id="helpful">
+               <div class="choose__container container">
+                  <form action="#" class="choose__form form-choose">
+                     <h2>Подберите идеальный тариф по своим критериям</h2>
+                     <div class="form-choose__item form-choose__item--location">
+                        <input type="text" autocomplete="off" required name="Улица проживания" name="street" placeholder="Выберите улицу">
+                     </div>
+                     <div class="form-choose__together">
+                        <div class="form-choose__item form-choose__item--home">
+                           <input type="text" autocomplete="off" required name="Дом" name="home number" placeholder="Дом">
+                        </div>
+                        <div class="form-choose__item form-choose__item--servicies">
+                           <input type="text" autocomplete="off" required name="Услуги" name="servicies" placeholder="Услуги">
+                        </div>
+                     </div>
+                     <div class="form-choose__item form-choose__item--phone">
+                        <input type="tel" autocomplete="off" required name="Номер телефона" name="phone" placeholder="Номер телефона">
+                     </div>
+                     <div class="form-choose__range">
+                        <p>Скорость интернета</p>
+                        <div class="form-choose__slider" data-from="150" data-to="1000"></div>
+                        <div class="form-choose__inputs">
+                           <label class="form-choose__label">
+                              <input type="number" class="form-choose__start" min="150" max="1000" value="150">
+                              <span class="form-choose__text">Мбит/с</span>
+                           </label>
+                           <label class="form-choose__label">
+                              <input type="number" class="form-choose__end" min="150" max="1000" value="1000">
+                              <span class="form-choose__text">Мбит/с</span>
+                           </label>
+                        </div>
+                     </div>
+                     <div class="form-choose__range">
+                        <p>Стоимость в месяц</p>
+                        <div class="form-choose__slider" data-from="250" data-to="20000"></div>
+                        <div class="form-choose__inputs">
+                           <label class="form-choose__label">
+                              <input type="number" class="form-choose__start" min="250" max="20000" value="250">
+                              <span class="form-choose__text">руб</span>
+                           </label>
+                           <label class="form-choose__label">
+                              <input type="number" class="form-choose__end" min="250" max="20000" value="20000">
+                              <span class="form-choose__text">руб</span>
+                           </label>
+                        </div>
+                     </div>
+                     <input type="submit" value="Подобрать тариф" class="cta">
+                  </form>
+                  <div class="choose__cards">
+                     <div class="choose__card">
+                        <div class="choose__card-body">
+                           <h3>Поиск интернета по адресу</h3>
+                           <p>Найдите провайдеров, которые подключают интернет в вашем доме</p>
+                           <div class="choose__card-image choose__card-image--mobile"><img src="@temp/choose/01.svg" aria-hidden="true" alt=""></div>
+                           <button class="cta cta--reverse">Найти провайдера</button>
+                        </div>
+                        <div class="choose__card-image"><img src="@temp/choose/01.svg" aria-hidden="true" alt=""></div>
+                     </div>
+                     <div class="choose__card">
+                        <div class="choose__card-body">
+                           <h3>Рейтинг провайдеров</h3>
+                           <p>Рейтинг самых лучших интернет-провайдеров в Санкт-Петербурге</p>
+                           <div class="choose__card-image choose__card-image--mobile"><img src="@temp/choose/02.svg" aria-hidden="true" alt=""></div>
+                           <button class="cta cta--reverse">Смотреть рейтинг</button>
+                        </div>
+                        <div class="choose__card-image"><img src="@temp/choose/02.svg" aria-hidden="true" alt=""></div>
+                     </div>
+                     <div class="choose__card">
+                        <div class="choose__card-body">
+                           <h3>Каталог провайдеров</h3>
+                           <p>Список всех интернет-провайдеров Санкт-Петербурга</p>
+                           <div class="choose__card-image choose__card-image--mobile"><img src="@temp/choose/03.svg" aria-hidden="true" alt=""></div>
+                           <button class="cta cta--reverse">Смотреть каталог</button>
+                        </div>
+                        <div class="choose__card-image"><img src="@temp/choose/03.svg" aria-hidden="true" alt=""></div>
+                     </div>
+                     <div class="choose__card">
+                        <div class="choose__card-body">
+                           <h3>Все тарифы</h3>
+                           <p>163 тарифа на домашний интернет и телевидение в Санкт-Петербурге</p>
+                           <div class="choose__card-image choose__card-image--mobile"><img src="@temp/choose/04.svg" aria-hidden="true" alt=""></div>
+                           <button class="cta cta--reverse">Смотреть тарифы</button>
+                        </div>
+                        <div class="choose__card-image"><img src="@temp/choose/04.svg" aria-hidden="true" alt=""></div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="page__internet internet">
+               <div class="internet__container container">
+                  <div class="internet__content">
+                     <div class="internet__logo">
+                        <img src="@img/logo--light.svg" alt="Логотип сервиса «Мегабитка»">
+                     </div>
+                     <h2>Интернет в 5 раз быстрее по той же цене</h2>
+                     <p>
+                        Список всех интернет-провайдеров Санкт-Петербурга. 163 тарифа на домашний интернет и телевидение в Санкт-Петербурге. Найдите провайдеров, которые подключают интернет в вашем доме. Рейтинг самых лучших интернет-провайдеров в Санкт-Петербурге
+                     </p>
+                  </div>
+                  <div class="internet__image-box">
+                     <img src="@temp/internet/01.jpg" alt="Мужчина работает за ноутбуком с быстрым интернетом">
+                     <span class="internet__benefit">
+                        <span>до</span>
+                        <strong>200</strong>
+                        <span>Мбит/с</span>
+                     </span>
+                  </div>
+               </div>
+            </section>
+            <section class="page__address address">
+               <div class="address__container container">
+                  <div class="address__content">
+                     <h2><span>Мегабитка - </span> <br>
+                        поиск и подключение провайдеров интернета по адресу в Санкт-Петербурге
+                     </h2>
+                     <button class="cta" data-popup="#callback">Проверить свой адрес</button>
+                  </div>
+                  <div class="address__cards">
+                     <div class="address__card">
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#office">
+                        </svg>
+                        <h3>В квартиру</h3>
+                        <p>от 250 руб</p>
+                        <span>Узнайте, какие провайдеры работают в вашем доме</span>
+                        <div class="cta" data-popup="#callback">Проверить свой адрес</div>
+                     </div>
+                     <div class="address__card">
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#house">
+                        </svg>
+                        <h3>В офис</h3>
+                        <p>от 450 руб</p>
+                        <span>Сравните тарифные планыи выберите понравившиеся</span>
+                        <div class="cta" data-popup="#callback">Проверить свой адрес</div>
+                     </div>
+                     <div class="address__card">
+                        <svg>
+                           <use xlink:href="@img/sprite.svg#apps">
+                        </svg>
+                        <h3>В частный дом</h3>
+                        <p>от 500 руб</p>
+                        <span>Дождитесь звонка нашего оператора, для уточнения деталей</span>
+                        <div class="cta" data-popup="#callback">Проверить свой адрес</div>
+                     </div>
+                  </div>
+                  <button class="cta address__button-tablet" data-popup="#callback">
+                     Проверить свой адрес
+                  </button>
+                  <div class="address__dots"></div>
+               </div>
+            </section>
+            <section class="page__benefits benefits">
+               <div class="benefits__container container">
+                  <h2>Выбирай Интернет и ТВ в Мегабитка!</h2>
+                  <p>Узнайте, почему домашний интернет удобнее и выгоднее с нами</p>
+                  <div class="benefits__body">
+                     <div class="benefits__column">
+                        <div class="benefits__item">
+                           <h3>Все провайдеры города</h3>
+                           <p>
+                              Мы подключаем все тарифы локальных, региональных и федеральных провайдеров, получаем честную обратную связь от клиентов по качеству предоставляемых услуг. 
+                           </p>
+                           <p>
+                              У нас есть вся необходимая информация, чтобы независимо проконсультировать Вас и подобрать самый выгодный тариф на Домашний Интернет, ТВ, оборудование, связь и другие услуги провайдера.
+                           </p>
+                        </div>
+                        <div class="benefits__item">
+                           <h3>Без переплат</h3>
+                           <p>
+                              Мы являемся официальными представителями провайдеров интернета. Поэтому цены на тарифы, акции и спецпредложения обновляются в онлайн-режиме. 
+                           </p>
+                           <p>
+                              Подключая интернет через наш сервис, вы напрямую заключаете договор с провайдером и получаете доступ в личный кабинет.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="benefits__column">
+                        <div class="benefits__item">
+                           <h3>Экономия времени</h3>
+                           <p>
+                              Удобный сервис сравнения тарифных планов, рейтинг провайдеров, отзывы клиентов и грамотная консультация наших специалистов — мы создали все условия для принятия быстрого и верного решения.
+                           </p>
+                        </div>
+                        <div class="benefits__item">
+                           <h3>Подарки каждый месяц</h3>
+                           <p>
+                              Вам доступны не только бонусы от провайдеров, но и подарки от нашей компании. Таким образом вы получаете вдвое больше выгоды.
+                           </p>
+                        </div>
+                        <div class="benefits__item">
+                           <h3>Секретные тарифы</h3>
+                           <p>
+                              Подключая интернет через наш сервис, вы получаете доступ к секретным тарифам провайдеров, которых нет на их официальных сайтах.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="page__faq faq" id="help">
+               <div class="faq__container container">
+                  <h2>Вопросы и ответы по подключению</h2>
+                  <div data-spollers class="spollers">
+                     <div class="spollers__item">
+                        <button type="button" data-spoller class="spollers__title">
+                           <h3>Почему мне стоит выбрать ваш сервис?</h3>
+                           <span></span>
+                        </button>
+                        <div class="spollers__body">
+                           <p>
+                              Ряд провайдеров предоставляют такую возможность. Условия предоставления данной услуги отличаются. Оставьте заявку для детальной консультации
+                           </p>
+                        </div>
+                     </div>
+                     <div class="spollers__item">
+                        <button type="button" data-spoller class="spollers__title _spoller-active">
+                           <h3>Я делаю ремонт и хочу сделать предмонтаж Интернета и ТВ, это возможно?</h3>
+                           <span></span>
+                        </button>
+                        <div class="spollers__body">
+                           <p>
+                              Ряд провайдеров предоставляют такую возможность. Условия предоставления данной услуги отличаются. Оставьте заявку для детальной консультации
+                           </p>
+                           <p>
+                              Ряд провайдеров предоставляют такую возможность. Условия предоставления данной услуги отличаются. Оставьте заявку для детальной консультации
+                           </p>
+                        </div>
+                     </div>
+                     <div class="spollers__item">
+                        <button type="button" data-spoller class="spollers__title">
+                           <h3>У меня есть свой роутер, я могу его использовать?</h3>
+                           <span></span>
+                        </button>
+                        <div class="spollers__body">
+                           <p>
+                              Ряд провайдеров предоставляют такую возможность. Условия предоставления данной услуги отличаются. Оставьте заявку для детальной консультации
+                           </p>
+                        </div>
+                     </div>
+                     <div class="spollers__item">
+                        <button type="button" data-spoller class="spollers__title">
+                           <h3>У меня проблемы с интернетом, ТВ или оборудованием, вы сможете мне помочь?</h3>
+                           <span></span>
+                        </button>
+                        <div class="spollers__body">
+                           <p>
+                              Ряд провайдеров предоставляют такую возможность. Условия предоставления данной услуги отличаются. Оставьте заявку для детальной консультации
+                           </p>
+                           <p>
+                              Ряд провайдеров предоставляют такую возможность. Условия предоставления данной услуги отличаются. Оставьте заявку для детальной консультации
+                           </p>
+                        </div>
+                     </div>
+                     <div class="spollers__item">
+                        <button type="button" data-spoller class="spollers__title">
+                           <h3>Сколько стоит подключение?</h3>
+                           <span></span>
+                        </button>
+                        <div class="spollers__body">
+                           <p>
+                              Ряд провайдеров предоставляют такую возможность. Условия предоставления данной услуги отличаются. Оставьте заявку для детальной консультации
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <form action="#" class="faq__form form-callback">
+                     <h2>
+                        Если остались вопросы, оставьте заявку, и мы свяжемся с вами в течении 15 минут
+                     </h2>
+                     <div class="form-callback__body">
+                        <div class="form-callback__item">
+                           <label for="callback-name">Как вас зовут?</label>
+                           <input type="text" name="ФИО" id="callback-name" autocomplete="off" required placeholder="Ваше ФИО">
+                        </div>
+                        <div class="form-callback__item">
+                           <label for="callback-phone">Контактный телефон</label>
+                           <input type="tel" name="ФИО" id="callback-phone" autocomplete="off" required placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="form-callback__item">
+                           <input type="submit" value="Подобрать тариф" class="cta">
+                        </div>
+                     </div>
+                     <span>
+                        Отправляя заявку, вы соглашаетесь с <a href="#">политикой обратки персональных данных</a>
+                     </span>
+                  </form>
+               </div>
+            </section>
+         </main>
+         @@include("./html/_footer.html",{})
+      </div>
+      @@include("./html/_popup.html", {}) 
+      @@include("./html/_js-vendors.html",{})
+   </body>
+</html>

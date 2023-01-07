@@ -1,0 +1,12 @@
+// Подключение общих CSS-переменных
+:root {
+   --clr-white: #fff;
+   --clr-black: #252525;
+   --clr-accent: #ff312c;
+   --clr-hover-accent: #ff5351;
+   --clr-green: #23a9b1;
+   --header-height: 5rem;
+   @media(max-width: $mobileSmall) {
+      --header-height: 3.75rem;
+   }
+}

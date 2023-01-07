@@ -1,0 +1,122 @@
+.form-choose {
+   align-self: start;
+   padding: rem(20) rem(30) rem(30);
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   border-radius: rem(18);
+   h2 {
+      @extend %f-16-500;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: rem(20);
+   }
+   
+   &__item {
+      position: relative;
+      margin-bottom: rem(12);
+   }
+
+   &__item input {
+      width: 100%;
+      height: rem(44);
+      padding: rem(5) rem(20);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+      @extend %fw-500;
+      transition: box-shadow 0.32s ease-in-out;
+      &::placeholder {
+         opacity: 1;
+         color: rgba(37, 37, 37, 0.6);
+      }
+      @media(any-hover: hover) {
+         &:hover {
+            box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.3);
+         }
+      }
+      &:focus {
+         outline: none;
+         box-shadow: 0px 0px 10px rgba(37, 37, 37, 0.3),
+               inset 0px 0px 5px rgba(37, 37, 37, 0.05);
+      }
+   }
+
+   &__item--location {
+      input {
+         background-repeat: no-repeat;
+         background-position: calc(100% - 15px) center;
+         background-size: rem(14) rem(14);
+         background-image: url("@img/pin.svg");
+      }
+   }
+
+   &__together {
+      display: flex;
+   }
+
+   &__item--home {
+      flex: 0 0 calc(42% - rem(14));
+      margin-right: rem(14);
+   }
+
+   &__item--servicies {
+      flex: 0 0 58%;
+   }
+
+   &__item--phone {
+   }
+
+   &__range {
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+      input[type=number] {
+         -moz-appearance: textfield;
+      }
+      margin-bottom: rem(18);
+      p {
+         @extend %f-12-500;
+         color: rgba(37, 37, 37, 0.5);
+      }
+   }
+
+   &__slider {
+      margin-top: rem(12);
+      margin-bottom: rem(8);
+   }
+
+   &__inputs {
+      @extend %fl-r-ct;
+      justify-content: space-between;
+   }
+
+   &__label {
+      @extend %fl-r-ct;
+   }
+
+   &__input {
+   }
+   
+   &__text,
+   &__start,
+   &__end {
+      @extend %f-12-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__start {
+      max-width: rem(38);
+      flex-shrink: 1;
+      outline: none;
+   }
+
+   &__end {
+      max-width: rem(38);
+      flex-shrink: 1;
+      outline: none;
+   }
+
+   input[type=submit] {
+      width: 100%;
+   }
+}

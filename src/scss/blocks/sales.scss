@@ -1,0 +1,101 @@
+.sales {
+   padding: rem(70) 0;
+   background-color: #f0f9fa;
+   margin-top: rem(85);
+   margin-bottom: rem(50);
+   @media(max-width: $mobileMini) {
+      padding-top: rem(28);
+      padding-bottom: rem(28);
+      margin-bottom: rem(28);
+      margin-top: rem(28);
+   }
+   &__container {
+      h2 {
+         @extend %f-32-600;
+         text-align: center;
+         @media(max-width: $tablet) {
+            font-size: rem(30);
+         }
+         @media(max-width: $mobile) {
+            font-size: rem(28);
+         }
+         @media(max-width: $mobileNormal) {
+            font-size: rem(24);
+         }
+         @media(max-width: $mobileSmall) {
+            font-size: rem(20);
+         }
+         @media(max-width: $mobileMini) {
+            font-size: rem(18);
+         }
+      }
+      p {
+         margin-top: rem(6);
+         @extend %fw-500;
+         color: rgba(37, 37, 37, 0.8);
+         text-align: center;
+      }
+   }
+
+   &__slider {
+      margin-top: rem(30);
+      &:not(.slick-initialized) {
+         display: flex;
+      }
+      &:not(.slick-initialized) .sales__card {
+         &:not(:last-child) {
+            margin-right: rem(30);
+         }
+         &:nth-child(n + 5) {
+            display: none;
+         }
+      }
+   }
+
+   &__card {
+      .slick-initialized & {
+         margin: 0 rem(20);
+         @media(max-width: $mobileNormal) {
+            margin: 0;
+            &:not(:last-child) {
+               margin-right: rem(16);
+            }
+         }
+      }
+   }
+
+   &__arrow {
+      position: absolute;
+      top: 50%;
+      right: rem(-20);
+      @extend %fl-a-ct;
+      width: rem(40);
+      height: rem(40);
+      border-radius: 50%;
+      filter: drop-shadow(0px -12px 80px rgba(0, 0, 0, 0.17)) drop-shadow(0px -3.61765px 24.1177px rgba(0, 0, 0, 0.11077)) drop-shadow(0px -1.50259px 10.0172px rgba(0, 0, 0, 0.085)) drop-shadow(0px -0.543456px 3.62304px rgba(0, 0, 0, 0.0592299));
+      background-color: #23a9b1;
+      svg {
+         display: block;
+         width: rem(4);
+         height: rem(8);
+         transition: transform 0.3s ease;
+      }
+      &:focus {
+         outline: none;
+      }
+      @media(any-hover: hover) {
+         &:hover {
+            svg {
+               transform: scale(1.5);
+            }
+         }
+      }
+      &:focus {
+         outline: none;
+         svg {transform: scale(1.5);}
+      }
+      @media(max-width: $pc) {
+         right: rem(20);
+      }
+   }
+}

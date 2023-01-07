@@ -1,0 +1,273 @@
+// Общий файл элементов форм
+// @import "base/forms/forms";
+
+// Стили табов
+// @import "base/tabs";
+
+// Стили карт
+// @import "base/maps";
+
+// Стили блока "показать еще"
+// @import "base/showmore";
+
+// Стили для полноэкранного блока
+// @import "base/fullscreen";
+
+// Стили для липкого блока
+// @import "base/sticky";
+
+// Адаптивные изображения
+%ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+%ibg-contain {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: contain;
+	}
+}
+// Счетчик для списка
+%listCounter {
+	list-style-type: none;
+	counter-reset: item;
+	li {
+		position: relative;
+		&:before {
+			counter-increment: item;
+			content: counter(item);
+         font-weight: 900;
+         font-size: rem(28);
+         line-height: 1.25;
+         color: var(--clr-yellow);
+		}
+	}
+}
+// Адаптивное видео
+%responsiveVideo {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 56.25%;
+	video,
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+// Видео в качестве фона
+%videoBackground {
+	video,
+	iframe,
+	object,
+	embed {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: -100;
+		transform: translateX(-50%) translateY(-50%);
+		background-size: cover;
+	}
+}
+// Серый фильтр
+%grayfilter {
+	transition: all 0.3s ease 0s;
+	filter: grayscale(1);
+	@media (any-hover: hover) {
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}
+// Отменить выделение
+%noselect {
+	user-select: none;
+}
+// Зеркальное отображение
+%mirror {
+	transform: scale(-1, 1);
+}
+// Плавный скролл
+%smoothscroll {
+	-webkit-overflow-scrolling: touch;
+}
+// Скрыть скролл
+%hidescroll {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+// Флекс всё по центру
+%fl-a-ct {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+// Флекс всё старту
+%fl-a-st {
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+// Строка по центу
+%fl-r-ct {
+   display: flex;
+   align-items: center;
+}
+// Строка по низу
+%fl-r-bt {
+   display: flex;
+   align-items: flex-end;
+}
+// Строка по центру SB
+%fl-r-sb {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+// Строка по верху
+%fl-r-st {
+   display: flex;
+   align-items: flex-start;
+}
+// Флекс колонка по началу
+%fl-c-st {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+// Флекс колонка по концу
+%fl-c-end {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+// Флекс колонка по центру
+%fl-c-ct {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+// Фоновое изображение
+%bg-cov {
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+// То же самое, но contain
+%bg-con {
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+%f-12-500 {
+   font-weight: 500;
+   font-size: rem(12);
+   line-height: 100%;
+}
+%f-13-600 {
+   font-weight: 600;
+   font-size: rem(13);
+   line-height: 100%;
+}
+%fw-500 {
+   font-weight: 500;
+   font-size: rem(14);
+   line-height: 100%;
+}
+%f-15-400 {
+   font-size: rem(15);
+   line-height: 140%;
+}
+%f-15-500 {
+   font-weight: 500;
+   font-size: rem(15);
+   line-height: 100%;
+}
+%f-16-500 {
+   font-weight: 500;
+   font-size: rem(16);
+   line-height: 130%;
+}
+%subtitle {
+   font-weight: 600;
+   font-size: rem(18);
+   line-height: 130%;
+}
+%f-18-500 {
+   font-weight: 500;
+   font-size: rem(18);
+   line-height: 100%;
+}
+%f-18-600 {
+   font-weight: 600;
+   font-size: rem(18);
+   line-height: 130%;
+}
+%f-18-700 {
+   font-weight: 700;
+   font-size: rem(18);
+   line-height: 100%;
+}
+%f-20-500 {
+   font-weight: 500;
+   font-size: rem(20);
+   line-height: 100%;
+}
+%f-20-600 {
+   font-weight: 600;
+   font-size: rem(20);
+   line-height: 100%;
+}
+%f-24-600 {
+   font-weight: 600;
+   font-size: rem(24);
+   line-height: 130%;
+}
+%f-32-600 {
+   font-weight: 600;
+   font-size: rem(32);
+   line-height: 130%;
+}
+%f-38-600 {
+   font-weight: 600;
+   font-size: rem(38);
+   line-height: 100%;
+}
+%f-42-700 {
+   font-weight: 700;
+   font-size: rem(42);
+   line-height: 100%;
+}
+%more_arrow {
+   content: "";
+   flex: 0 0 rem(10);
+   width: rem(10);
+   height: rem(6);
+   margin-left: rem(5);
+   @extend %bg-con;
+   background-image: url("@img/show_more.svg");
+   transform: translateY(1px);
+}

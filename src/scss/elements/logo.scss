@@ -1,0 +1,15 @@
+.logo {
+   img {
+      display: block;
+      max-width: rem(187);
+      width: 100%;
+   }
+   @media(max-width: $tablet) {
+      img {
+         max-width: rem(160);
+      }
+   }
+   @media(max-width: $mobileSmall) {
+      max-width: rem(120);
+   }
+}

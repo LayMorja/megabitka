@@ -1,0 +1,119 @@
+.choose {
+   margin-top: rem(70);
+   margin-bottom: rem(50);
+   @media(max-width: $mobileMini) {
+      margin-bottom: rem(28);
+      margin-top: rem(28);
+   }
+   &__container {
+      display: grid;
+      grid-template-columns: rem(332) 1fr;
+      column-gap: rem(45);
+      @media(max-width: $tablet) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__form {
+      @media(max-width: $tablet) {
+         max-width: rem(560);
+         margin: 0 auto;
+         margin-bottom: rem(40);
+      }
+      @media(max-width: $mobileMini) {
+         margin-bottom: rem(28);
+      }
+   }
+
+   &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(40);
+      @media(max-width: $mobileNormal) {
+         gap: rem(25);
+      }
+      @media(max-width: $mobileMedium) {
+         display: flex;
+         overflow-x: auto;
+      }
+   }
+
+   &__card {
+      @extend %fl-r-ct;
+      justify-content: space-between;
+      padding: rem(38) rem(32) rem(40) rem(40);
+      background-color: var(--clr-white);
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.06);
+      border-radius: rem(18);
+      transition: box-shadow 0.32s ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.16);
+         }
+      }
+      @media(max-width: $notebook) {
+         flex-direction: column-reverse;
+      }
+      @media(max-width: $mobile) {
+         padding: rem(35) rem(30) rem(40);
+      }
+      @media(max-width: $mobileMedium) {
+         flex: 1 0 rem(198);
+         padding: rem(24) rem(22);
+      }
+   }
+
+   &__card-body {
+      @extend %fl-c-st;
+      h3 {
+         @extend %f-18-600;
+         @media(max-width: $mobileMedium) {
+            text-align: center;
+         }
+      }
+      p {
+         max-width: rem(180);
+         margin-top: rem(18);
+         @extend %f-12-500;
+         color: rgba(37, 37, 37, 0.8);
+         margin-bottom: rem(27);
+         @media(max-width: $mobileMedium) {
+            text-align: center;
+            margin: rem(10) 0 rem(8);
+         }
+      }
+      button {
+         padding-right: rem(30);
+         padding-left: rem(30);
+         margin-top: auto;
+         @media(max-width: $mobileMedium) {
+            width: 100%;
+            padding-left: rem(12);
+            padding-right: rem(12);
+         }
+      }
+   }
+
+   &__card-image {
+      flex: 0 1 rem(170);
+      margin-left: rem(4);
+      @extend %ibg;
+      padding-bottom: percent(170, 490);
+      @media(max-width: $notebook) {
+         width: rem(170);
+      }
+      @media(max-width: $mobileMedium) {
+         display: none;
+      }
+      &--mobile {
+         display: none;
+         @media(max-width: $mobileMedium) {
+            display: block;
+            margin: 0 auto;
+            width: rem(100);
+            flex: 0 0 rem(100);
+            object-fit: contain;
+         }
+      }
+   }
+}

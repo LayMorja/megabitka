@@ -1,0 +1,76 @@
+/* ======================================================================== */
+.device {
+   @extend %fl-r-ct;
+   @media(max-width: $mobileMedium) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+   }
+   svg {
+      display: block;
+      flex: 0 0 rem(32);
+      width: rem(32);
+      height: rem(32);
+      &:not(:last-child) {
+         margin-right: rem(20);
+      }
+      @media(max-width: $mobileMedium) {
+         margin-bottom: rem(10);
+      }
+   }
+   &__description {
+      @extend %fl-c-st;
+      flex-shrink: 0;
+      &:not(:last-child) {
+         margin-right: rem(20);
+      }
+      @media(max-width: $mobileMedium) {
+         flex: 1 1 80%;
+         align-self: center;
+         margin-bottom: rem(10);
+         &:not(:last-child) {
+            margin-right: 0;
+         }
+      }
+      @media(max-width: $mobileMini) {
+         flex: 1 1 calc(100% - rem(52));
+      }
+   }
+
+   &__description h3,
+   &__description h4 {
+      @extend %f-15-500;
+   }
+
+   &__description p,
+   &__description span {
+      margin-top: rem(6);
+      @extend %f-12-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__price {
+      margin-left: rem(20);
+      flex-shrink: 0;
+      @extend %fl-r-bt;
+   }
+
+   &__price strong {
+      @extend %f-20-500;
+   }
+
+   &__price span {
+      display: inline-block;
+      margin-left: rem(4);
+      @extend %fw-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   .selectric-device__select {
+      min-width: rem(182);
+      @media(max-width: $mobileMini) {
+         min-width: rem(120);
+         white-space: nowrap;
+      }
+   }
+}
+/* ======================================================================== */

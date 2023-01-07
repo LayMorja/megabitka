@@ -1,0 +1,384 @@
+/* ======================================================================== */
+.service {
+   padding: rem(28) rem(36);
+   border-radius: rem(18);
+   background-color: var(--clr-white);
+   box-shadow: 0px 14px 72px rgba(0, 0, 0, 0.06),
+               0px 2px 14px rgba(0, 0, 0, 0.03);
+   @media(max-width: em(1089.98)) {
+      padding: rem(28) rem(25);
+   }
+   @media(max-width: $mobileMedium) {
+      padding: rem(30) rem(22);
+   }
+
+   &__preview {
+      @extend %fl-r-st;
+      @media(max-width: $mobile) {
+         flex-direction: column;
+         align-items: stretch;
+      }
+   }
+
+   &__image-box {
+      flex: 0 0 rem(100);
+      height: rem(100);
+      border-radius: 50%;
+      margin-right: rem(18);
+      @extend %fl-a-ct;
+      @media(max-width: em(1089.98)) {
+         flex: 0 0 rem(80);
+         width: rem(80);
+         height: rem(100);
+      }
+      display: none;
+   }
+
+   &__image-box img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+   }
+
+   &__description {
+      margin-right: auto;
+      @media(max-width: $mobile) {
+         margin-right: 0;
+      }
+   }
+
+   &__description h3 {
+      @extend %subtitle;
+      margin-bottom: rem(20);
+      @media(max-width: $mobile) {
+         display: flex;
+         align-items: center;
+         text-align: center;
+         margin-bottom: rem(25);
+         &::before {
+            content: "";
+            flex: 0 0 rem(40);
+            width: rem(40);
+            height: rem(40);
+            margin-right: rem(12);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            .rostelekom & {
+               background-image: url("../temp/rostelekom.png");
+            }
+         }
+      }
+   }
+
+   &__description ul {
+      @extend %fl-r-st;
+      @media(max-width: $tablet) {
+         flex-direction: column;
+      }
+      @media(max-width: $mobile) {
+         align-items: stretch;
+      }
+   }
+
+   &__description ul li {
+      @extend %fl-r-st;
+      &:not(:last-child) {
+         margin-right: rem(50);
+      }
+      @media(max-width: em(1089.98)) {
+         &:not(:last-child) {
+            margin-right: rem(30);
+         }
+      }
+      @media(max-width: $tablet) {
+         &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: rem(14);
+         }
+      }
+      @media(max-width: $mobile) {
+         padding-bottom: rem(18);
+         width: 60%;
+         &:not(:last-child) {
+            margin-bottom: rem(18);
+         }
+      }
+      @media(max-width: $mobileMedium) {
+         width: 100%;
+         border-bottom: 1px solid rgba(37, 37, 37, 0.2);
+      }
+   }
+
+   &__description ul li svg {
+      display: block;
+      flex: 0 0 rem(24);
+      width: rem(24);
+      height: rem(24);
+      margin-right: rem(14);
+   }
+
+   &__description ul li div {
+      @extend %fl-c-st;
+      @extend %fw-500;
+   }
+
+   &__description ul li div span:first-child {
+      strong {
+         font-weight: 600;
+         font-size: rem(24);
+         line-height: 100%;
+      }
+      margin-bottom: rem(6);
+   }
+
+   &__description ul li div span:last-child {
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__price {
+      position: relative;
+      align-self: center;
+      @extend %fl-c-end;
+      margin-left: rem(20);
+      padding-right: rem(28);
+      @media(max-width: em(1089.98)) {
+         padding-right: rem(14);
+      }
+      @media(max-width: $tablet) {
+         align-self: flex-start;
+         padding-top: rem(6);
+      }
+      @media(max-width: $mobile) {
+         align-self: center;
+         justify-content: center;
+         align-items: center;
+         margin-left: 0;
+         padding-right: 0;
+         padding-top: 0;
+         margin-top: rem(18);
+         margin-bottom: rem(22);
+         text-align: center;
+      }
+   }
+
+   &__price div {
+      @extend %fl-r-st;
+   }
+
+   &__price div ~ span {
+      margin-top: rem(20);
+      @media(max-width: $mobile) {
+         margin-top: rem(10);
+      }
+   }
+
+   &__price span {
+      @extend %fw-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__price div strong {
+      font-weight: 600;
+      font-size: rem(38);
+      margin-right: rem(12);
+      line-height: 100%;
+   }
+
+   &__price div div {
+      @extend %fl-c-st;
+      @extend %fw-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__price div div span:not(:last-child) {
+      padding-bottom: rem(5);
+      border-bottom: 1px solid rgba(37, 37, 37, 0.2);
+   }
+
+   &__activities {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      padding-left: rem(28);
+      padding-top: rem(4);
+      padding-bottom: rem(8);
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 50%;
+         width: 1px;
+         height: calc(100% + rem(8));
+         margin-top: rem(-2);
+         margin-bottom: rem(-6);
+         background-color: rgba(37, 37, 37, 0.2);
+         transform: translateY(-50%);
+      }
+      .cta {
+         min-width: rem(200);
+         margin-bottom: rem(22);
+      }
+      @media(max-width: em(1089.98)) {
+         padding-left: rem(14);
+      }
+      @media(max-width: $mobile) {
+         padding-left: 0;
+         &::before {
+            display: none;
+         }
+      }
+   }
+
+   &__more {
+      @extend %fl-r-ct;
+      justify-content: center;
+      @extend %fw-500;
+      color: rgba(37, 37, 37, 0.5);
+      &::after {
+         @extend %more_arrow;
+         transition: transform 0.5s ease-in-out;
+      }
+      transition: color 0.32s ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            color: var(--clr-black);
+         }
+      }
+      &:focus {
+         outline: none;
+         color: var(--clr-black);
+      }
+      &._open {
+         color: var(--clr-black);
+         &::after {
+            transform: translateY(rem(0)) rotate(-180deg);
+         }
+      }
+   }
+
+   &__content {
+      padding: rem(40) 0 rem(45) rem(150);
+      @media(max-width: $notebook) {
+         padding: rem(35) 0 rem(40) rem(100);
+      }
+      @media(max-width: em(1079.98)) {
+         padding-left: rem(60);
+      }
+      @media(max-width: $tablet) {
+         padding: rem(30) 0 rem(35);
+      }
+   }
+
+   &__result {
+      display: flex;
+      @media(max-width: $tablet) {
+         flex-direction: column;
+      }
+   }
+
+   &__result,
+   &__text,
+   &__other {
+      padding: rem(28) 0;
+      border-top: 1px solid rgba(37, 37, 37, 0.08);
+   }
+
+   &__devices {
+   }
+
+   &__device {
+      &:not(:last-child) {margin-bottom: rem(24);}
+   }
+
+   &__result-price {
+      @extend %fl-c-st;
+      justify-content: space-between;
+      margin-left: rem(190);
+      @media(max-width: $notebook) {
+         margin-left: rem(80);
+      }
+      @media(max-width: em(1079.98)) {
+         margin-left: rem(40);
+      }
+      @media(max-width: $tablet) {
+         margin-left: 0;
+         margin-top: rem(30);
+      }
+   }
+
+   &__result-item {
+      @extend %fl-r-ct;
+      @media(max-width: $tablet) {
+         &:not(:last-child) {margin-bottom: rem(12);}
+      }
+      @media(max-width: $mobileSmall) {
+         flex-wrap: wrap;
+      }
+   }
+
+   &__result-item > span {
+      flex: 0 0 rem(190);
+      width: rem(190);
+      margin-right: rem(40);
+      @extend %f-16-500;
+      color: rgba(37, 37, 37, 0.8);
+      @media(max-width: $mobileSmall) {
+         flex: 1 1 100%;
+         margin-bottom: rem(5);
+      }
+      @media(max-width: $mobileMini) {
+         font-size: rem(14);
+      }
+   }
+
+   &__result-item div {
+      white-space: nowrap;
+   }
+
+   &__result-item div strong {
+      @extend %f-20-600;
+   }
+
+   &__result-item div span {
+      @extend %fw-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__text h3,
+   &__text h4 {
+      @extend %subtitle;
+      margin-bottom: rem(10);
+      &:not(:first-child) {
+         margin-top: rem(22); 
+      }
+      @media(max-width: $mobileMedium) {
+         font-size: rem(16);
+      }
+      @media(max-width: $mobileMini) {
+         font-size: rem(15);
+      }
+   }
+
+   &__text p {
+      @extend %f-15-400;
+      margin-bottom: rem(5);
+      &:not(:first-child) {
+         margin-top: rem(18);
+      }
+      @media(max-width: $mobileSmall) {
+         font-size: rem(14);
+      }
+      @media(max-width: $mobileMini) {
+         font-size: rem(12);
+         &:not(:first-child) {
+            margin-top: rem(14);
+         }
+      }
+   }
+
+   &__other {
+   }
+}
+/* ======================================================================== */

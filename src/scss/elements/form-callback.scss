@@ -1,0 +1,113 @@
+.form-callback {
+   padding: rem(40) rem(44);
+   border-radius: rem(18);
+   background-color: var(--clr-white);
+   box-shadow: 0px 14px 72px rgba(0, 0, 0, 0.06), 0px 1.75302px 13.7441px rgba(0, 0, 0, 0.03);
+   @media(max-width: $mobileNormal) {
+      padding: rem(35) rem(40);
+   }
+   @media(max-width: $mobileSmall) {
+      padding: rem(30) rem(35);
+   }
+   @media(max-width: $mobileMini) {
+      padding: rem(24) rem(22);
+   }
+   h2 {
+      max-width: rem(655);
+      @extend %f-24-600;
+      text-align: left;
+      @media(max-width: $tablet) {
+         font-size: rem(22);
+      }
+      @media(max-width: $mobileNormal) {
+         font-size: rem(20);
+      }
+      @media(max-width: $mobileSmall) {
+         text-align: center;
+      }
+      @media(max-width: $mobileMini) {
+         font-size: rem(18);
+      }
+   }
+
+   span {
+      @extend %f-12-500;
+      color: rgba(37, 37, 37, 0.5);
+      @media(max-width: $mobileSmall) {
+         display: inline-block;
+         text-align: center;
+      }
+   }
+   span a {
+      color: var(--clr-accent);
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+
+   &__body {
+      @extend %fl-r-bt;
+      margin-top: rem(32);
+      margin-bottom: rem(18);
+      @media(max-width: $mobileSmall) {
+         margin-top: rem(20);
+         margin-bottom: rem(16);
+      }
+      @media(max-width: $mobile) {
+         flex-direction: column;
+      }
+   }
+
+   &__item {
+      flex-grow: 1;
+      width: 100%;
+      &:not(:last-child) {
+         margin-right: rem(24);
+      }
+      label {
+         cursor: pointer;
+         display: block;
+         margin-bottom: rem(12);
+         @extend %fw-500;
+         color: rgba(37, 37, 37, 0.8);
+      }
+      input:not([type=submit]) {
+         width: 100%;
+         height: rem(48);
+         padding: rem(5) rem(24);
+         border-radius: rem(18);
+         border: 1px solid rgba(255, 49, 44, 0.18);
+         font-weight: 600;
+         &::placeholder {
+            opacity: 1;
+            color: rgba(37, 37, 37, 0.4);
+         }
+         transition: box-shadow 0.3s ease;
+         @media(any-hover: hover) {
+            &:hover {
+               box-shadow: 2px 2px 10px 4px rgba(255, 49, 44, 0.2);
+            }
+         }
+         &:focus {
+            outline: none;
+            box-shadow: 2px 2px 10px 4px rgba(255, 49, 44, 0.2),
+                  inset 2px 2px 20px rgba(255, 49, 44, 0.1);
+         }
+         @media(max-width: $mobileMedium) {
+            font-size: rem(13);
+         }
+      }
+      input[type=submit] {
+         width: 100%;
+      }
+      @media(max-width: $mobile) {
+         &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: rem(24);
+         }
+      }
+      @media(max-width: $mobileMedium) {
+         &:not(:last-child) {margin-bottom: rem(18);}
+      }
+   }
+}

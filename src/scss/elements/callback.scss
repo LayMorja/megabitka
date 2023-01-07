@@ -1,0 +1,37 @@
+.cta {
+   cursor: pointer;
+   @extend %fl-a-ct;
+   padding: rem(17) rem(36);
+   border: 1px solid rgba(255, 49, 44, 0.2);
+   background-color: var(--clr-accent);
+   border-radius: rem(4);  
+   font-weight: 600;
+   line-height: 100%;
+   text-align: center;
+   color: var(--clr-white);
+   transition: all 0.32s ease-in-out;
+   @media(any-hover: hover) {
+      &:hover {
+         background-color: var(--clr-hover-accent);
+      }
+   }
+   &:focus {
+      outline: none;
+      background-color: var(--clr-hover-accent);
+   }
+   &--reverse {
+      background-color: var(--clr-white);
+      color: var(--clr-accent);
+      @media(any-hover: hover) {
+         &:hover {
+            background-color: var(--clr-accent);
+            color: var(--clr-white);
+         }
+      }
+      &:focus {
+         outline: none;
+         background-color: var(--clr-accent);
+         color: var(--clr-white);
+      }
+   }
+}

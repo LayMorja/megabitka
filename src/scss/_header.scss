@@ -1,0 +1,209 @@
+//====================================================================================================
+.header {
+   position: absolute;
+   z-index: 30;
+   width: 100%;
+   top: 0;
+   left: 0;
+   min-height: rem(40);
+
+   &__wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: var(--header-height);
+      padding: rem(5) 0;
+      @extend %fl-c-ct;
+      background-color: var(--clr-white);
+      transition: all 0.32s ease-in-out;
+      ._header-scroll & {
+         background-color: rgba(255, 255, 255, 0.95);
+         min-height: rem(70);
+      }
+      @media(max-width: $mobileSmall) {
+         ._header-scroll & {
+            min-height: rem(50);
+         }
+      }
+   }
+
+   &__container {
+      width: 100%;
+      @extend %fl-r-ct;
+   }
+
+   &__logo {
+      position: relative;
+      z-index: 24;
+      margin-right: auto;
+   }
+
+   &__menu {
+      align-self: center;
+   }
+
+   &__phone {
+      margin-left: rem(157);
+      @media(max-width: em(1179.98)) {
+         margin-left: rem(50);
+      }
+      @media(max-width: $tablet) {
+         margin-left: rem(30);
+      }
+      @media(max-width: $mobileSmall) {
+         a {
+            font-size: rem(14);
+         }
+         span {
+            font-size: rem(10);
+         }
+      }
+      @media(max-width: $mobileMini) {
+         display: none;
+      }
+   }
+
+   &__callback {
+      margin-left: rem(50);
+      @media(max-width: $tablet) {
+         margin-left: rem(30);
+      }
+      @media(max-width: $mobile) {
+         display: none;
+      }
+   }
+
+   &__phone-icon {
+      position: relative;
+      z-index: 24;
+      &:focus {
+         outline: none;
+      }
+      display: none;
+      svg {
+         display: block;
+         width: rem(18);
+         height: rem(18);
+      }
+      @media(max-width: $mobileMini) {
+         display: block;
+      }
+   }
+
+   .icon-menu {
+      &:focus {
+         outline: none;
+      }
+      display: none;
+      @media (max-width: $tablet) {
+         display: block;
+         position: relative;
+         width: rem(24);
+         height: rem(16);
+         margin-left: rem(30);
+         cursor: pointer;
+         z-index: 31;
+         span,
+         &::before,
+         &::after {
+            content: "";
+            transition: all 0.35s ease 0s;
+            right: 0;
+            position: absolute;
+            height: rem(2);
+            background-color: var(--clr-black);
+            border-radius: 20px;
+         }
+         &::before {
+            width: 18px;
+            top: 0;
+            animation: menu07-bar01 .55s forwards;
+         }
+         span {
+            width: 100%;
+            top: calc(50% - rem(1));
+            transition: all .25s .25s;
+            opacity: 1;
+         }
+         &::after {
+            width: 13px;
+            bottom: 0;
+            animation: menu07-bar03 .55s forwards;
+         }
+         .menu-open & {
+            &::before {
+               animation: active-menu07-bar01 .55s forwards;
+            }
+            span {
+               opacity: 0;
+            }
+            &::after {
+               animation: active-menu07-bar03 .55s forwards;
+            }
+            &::before,
+            &::after,
+            span {
+               width: 100%;
+               background-color: var(--clr-white);
+            }
+         }
+      }
+      @media(max-width: $mobileSmall) {
+         margin-left: rem(16);
+      }
+   }
+}
+//====================================================================================================
+@keyframes menu07-bar01 {
+   0% {
+      transform: translateY(7px) rotate(45deg);
+   }
+
+   50% {
+      transform: translateY(7px) rotate(0);
+   }
+
+   100% {
+      transform: translateY(0) rotate(0);
+   }
+}
+@keyframes menu07-bar03 {
+   0% {
+      transform: translateY(-7px) rotate(-45deg);
+   }
+
+   50% {
+      transform: translateY(-7px) rotate(0);
+   }
+
+   100% {
+      transform: translateY(0) rotate(0);
+   }
+}
+@keyframes active-menu07-bar01 {
+   0% {
+      transform: translateY(0) rotate(0);
+   }
+
+   50% {
+      transform: translateY(7px) rotate(0);
+   }
+
+   100% {
+      transform: translateY(7px) rotate(45deg);
+   }
+}
+@keyframes active-menu07-bar03 {
+   0% {
+      transform: translateY(0) rotate(0);
+   }
+
+   50% {
+      transform: translateY(-7px) rotate(0);
+   }
+
+   100% {
+      transform: translateY(-7px) rotate(-45deg);
+   }
+}

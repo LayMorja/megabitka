@@ -1,0 +1,104 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.spollers {
+	display: grid;
+}
+.spollers__item:not(:last-child) .spollers__title {
+   border-bottom: 1px solid rgba(37, 37, 37, 0.08);
+}
+// Заголовок спойлера
+.spollers__title {
+	position: relative;
+   @extend %fl-r-ct;
+   justify-content: space-between;
+	width: 100%;
+	cursor: default;
+	text-align: left;
+   padding: rem(22) rem(40);
+   transition: all 0.5s ease 0s;
+	._spoller-init & {
+		cursor: pointer;
+      span {
+         align-self: flex-start;
+         position: relative;
+         flex: 0 0 rem(40);
+         margin-left: rem(20);
+         width: rem(40);
+         height: rem(40);
+         border-radius: 50%;
+         border: 1px solid rgba(37, 37, 37, 0.2);
+			transition: all 0.5s ease 0s;
+         @media(max-width: $mobileSmall) {
+            flex: 0 0 rem(32);
+            width: rem(32);
+            height: rem(32);
+         }
+      }      
+		span::before,
+		span::after {
+			content: "";
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			background-color: #252525;
+			height: 2px;
+			width: 8px;
+			transition: all 0.5s ease 0s;
+         @media(max-width: $mobileSmall) {
+            right: 8px;
+         }
+		}
+		span::before {
+			transform: translate(-70%, -50%) rotate(40deg);
+		}
+		span::after {
+			transform: translate(-5%, -50%) rotate(-40deg);
+		}
+		&._spoller-active {
+         border-color: transparent;
+         span {
+            border-color: var(--clr-green);
+            background-color: var(--clr-green);
+         }
+			span::before {
+				transform: translateX(-70%) rotate(-40deg);
+            background-color: var(--clr-white);
+			}
+			span::after {
+				transform: translateX(-5%) rotate(40deg);
+            background-color: var(--clr-white);
+			}
+		}
+	}
+   @media(any-hover: hover) {
+      &:hover:not(._spoller-active) {
+         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+      }
+   }
+   &:focus {
+      outline: none;
+      span {
+         background-color: rgba(35, 170, 177, 0.2);
+      }
+      span::before,
+      span::after {
+         background-color: rgba(37, 37, 37, 0.7);
+      }
+   }
+   @media(max-width: $mobileSmall) {
+      padding: rem(22);
+      padding-right: rem(16);
+   }
+}
+// Контент спойлера
+.spollers__body {
+   padding: rem(0) rem(40) rem(30);
+   border-bottom: 1px solid rgba(37, 37, 37, 0.08);
+   @media(max-width: $mobileSmall) {
+      padding: rem(22);
+      padding-top: 0;
+      padding-right: rem(16);
+   }
+}

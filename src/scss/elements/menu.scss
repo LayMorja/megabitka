@@ -1,0 +1,107 @@
+.menu {
+   &__body {
+      ul {
+         @extend %fl-r-ct;
+      }
+      ul li {
+         &:not(:last-child) {
+            margin-right: rem(32);
+         }
+      }
+      ul li a {
+         font-weight: 500;
+         font-size: rem(15);
+         line-height: 100%;
+         color: rgba(37, 37, 37, 0.8);
+         transition: color 0.32s ease-in-out, letter-spacing 0.3s ease-in;
+         @media(any-hover: hover) {
+            &:hover {
+               color: var(--clr-black);
+            }
+         }
+         &:focus {
+            outline: none;
+            color: var(--clr-black);
+         }
+      }
+      @media(max-width: $tablet) {
+         position: fixed;
+         z-index: 20;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         padding: rem(120) rem(15) rem(60);
+         background-color: rgba(37, 37, 37, 0.8);
+         overflow: auto;
+         transition: transform 0.35s cubic-bezier(.39,.58,.57,1), opacity 0.35s ease-in-out 0.1s;
+         transform: translateY(-100%);
+         opacity: 0;
+         pointer-events: none;
+         .menu-open & {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+         }
+         ul {
+            flex-direction: column;
+         }
+         ul li:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: rem(30);
+         }
+         ul li a {
+            font-size: max(rem(20), 5vw);
+            color: var(--clr-white);
+            @media(any-hover: hover) {
+               &:hover {
+                  color: var(--clr-white);
+                  opacity: 0.8;
+               }
+            }
+            &:focus {
+               color: var(--clr-white);
+               opacity: 0.8;
+            }
+         }
+      }
+      @media(max-width: $mobileSmall) {
+         padding-top: rem(90);
+         ul li:not(:last-child) {
+            margin-bottom: rem(20);
+         }
+      }
+   }
+   &__callback {
+      margin: 0 auto;
+      margin-top: rem(40);
+      display: none;
+      @media(max-width: $tablet) {
+         display: flex;
+         border-color: rgba(255, 255, 255, 0.2);
+         span {
+            color: var(--clr-white);
+            font-size: max(rem(18), 3vw);
+         }
+      }
+      @media(max-width: $mobileSmall) {
+         margin-top: rem(30);
+      }
+   }
+   &__phone {
+      margin-top: rem(30);
+      display: none;
+      color: var(--clr-white);
+      @media(max-width: $mobileMini) {
+         display: flex;
+         align-items: center;
+         a {font-size: rem(20);}
+         span {
+            margin-top: rem(4);
+            font-size: rem(14);
+         }
+      }
+   }
+}
+
+//====================================================================================================

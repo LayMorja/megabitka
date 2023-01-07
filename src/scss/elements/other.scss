@@ -1,0 +1,194 @@
+/* ======================================================================== */
+.other {
+
+   > h3, > h4 {
+      @extend %subtitle;
+      margin-bottom: rem(15);
+      @media(max-width: $mobileNormal) {
+         text-align: center;
+      }
+      @media(max-width: $mobileMedium) {
+         font-size: rem(16);
+      }
+      @media(max-width: $mobileMini) {
+         font-size: rem(15);
+      }
+   }
+   &__list {
+      margin-top: rem(28);
+      padding-right: rem(52);
+      display: flex;
+      @media(max-width: $tablet) {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: rem(20);
+      }
+      @media(max-width: $mobileNormal) {
+         padding-right: 0;
+         grid-template-columns: 1fr;
+         gap: rem(24);
+      }
+   }
+
+   &__body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: rem(32) rem(24) rem(24) rem(36);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      border-radius: rem(18);
+      transition: box-shadow 320ms ease-in-out;
+      @media(any-hover: hover) {
+         &:hover {
+            box-shadow: 2px 2px 5px 2px rgba(255, 49, 44, 0.3),
+                        0px 0px 35px rgba(255, 49, 44, 0.05);
+         }
+      }
+   }
+
+   &__item {
+      flex-grow: 1;
+      width: 100%;
+      &:not(:last-child) {
+         margin-right: rem(32);
+      }
+
+      &._disabled {
+         position: relative;
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(37, 37, 37, 0.2);
+            border-radius: rem(18);
+         }
+      }
+   }
+
+   &__item h3,
+   &__item h4 {
+      @extend %f-18-700;
+      &:not(:last-child) {margin-bottom: rem(16);}
+   }
+
+   &__price {
+      margin-bottom: rem(10);
+      &:not(:last-child) {margin-bottom: rem(20);}
+   }
+
+   &__price strong {
+      @extend %f-20-600;
+   }
+
+   &__price span {
+      @extend %fw-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__device {
+      &:not(:last-child) {margin-bottom: rem(10);}
+   }
+
+   &__device p {
+      display: inline-block;
+      @extend %fw-500;   
+      color: rgba(37, 37, 37, 0.8);
+   }
+
+   &__device strong {
+      @extend %f-20-500;
+   }
+
+   &__device span {
+      @extend %fw-500;
+      color: rgba(37, 37, 37, 0.5);
+   }
+
+   &__descr {
+      @extend %f-13-600;
+      color: var(--clr-accent);
+   }
+
+   &__actions {
+      margin-top: auto;
+      @extend %fl-r-bt;
+      justify-content: space-between;
+   }
+
+   &__more {
+      @extend %fw-500;
+      @extend %fl-r-ct;
+      color: rgba(37, 37, 37, 0.5);
+      transition: color 0.32s ease-in-out;
+      &::after {
+         @extend %more_arrow;
+         transition: transform 0.5s ease-in-out;
+      }
+      @media(any-hover: hover) {
+         &:hover {
+            color: var(--clr-black);
+         }
+      }
+      &:focus {
+         outline: none;
+         color: var(--clr-black);
+      }
+      &._open {
+         color: var(--clr-black);
+         &::after {
+            transform: translateY(rem(0)) rotate(-180deg);
+         }
+      }
+   }
+
+   &__choose {
+      position: relative;
+      flex: 0 0 rem(48);
+      width: rem(48);
+      height: rem(48);
+      border-radius: 50%;
+      background-color: var(--clr-accent);
+   }
+
+   &__choose::after,
+   &__choose::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: var(--clr-white);
+      transform: translate(-50%, -50%);
+   }
+
+   &__choose::before {
+      width: rem(13);
+      height: rem(1);
+   }
+
+   &__choose::after {
+      width: rem(1);
+      height: rem(13);
+      transition: transform 0.32s ease-in-out;
+   }
+
+   &__item._active &__choose::after {
+      transform: rotate(90deg) translateX(rem(-6));
+   }
+
+   &__description {
+      margin-top: rem(20);
+      p {
+         @extend %f-12-500;
+         line-height: 1.3;
+         color: rgba(37, 37, 37, 0.8);
+      }
+      p:not(:first-child) {
+         margin-top: rem(8);
+      }
+   }
+}
+/* ======================================================================== */
