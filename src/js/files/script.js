@@ -148,7 +148,7 @@ const cards = Array.from(document.querySelector(".servicies__cards").children);
 let curItems = 3;
 buttonMore.addEventListener("click", hideBlock);
 
-let previousFilter;
+let previousFilter = "*";
 let prevButton;
 
 filterButtons.forEach(button => button.addEventListener("click", filterAction));
@@ -182,8 +182,11 @@ function hideBlock() {
    curItems += 3;
    const visibleItems = cards.slice(0, curItems);
    visibleItems.forEach(item => {
-      console.log(previousFilter)
-      if (item.hasAttribute("hidden")) {
+      if (previousFilter == "*" && item.hasAttribute("hidden")) {
+         $(item).fadeIn(400);
+         item.removeAttribute("hidden");
+      }
+      else if (item.hasAttribute("hidden")) {
          item.removeAttribute("hidden");
          if (item.classList.contains(previousFilter)) {
             $(item).fadeIn(400);
